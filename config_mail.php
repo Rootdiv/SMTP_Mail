@@ -20,7 +20,7 @@ function smtpmail($to, $mail_to, $subject, $message, $headers='') {
         $SEND .= "MIME-Version: 1.0\r\n";
         $SEND .= "Content-Type: text/html; charset=\"".$config['smtp_charset']."\"\r\n";
         $SEND .= "Content-Transfer-Encoding: 8bit\r\n";
-        $SEND .= "From: \"=?".$config['smtp_charset']."?B?".base64_encode($config['smtp_from'])."=?=\" <".$config['smtp_fromuser'].">\r\n";
+        $SEND .= "From: \"=?".$config['smtp_charset']."?B?".base64_encode($config['smtp_from'])."=?=\" <".$config['smtp_username'].">\r\n";
         $SEND .= "X-Priority: 3\r\n\r\n";
     }
     $SEND .=  $message."\r\n";
